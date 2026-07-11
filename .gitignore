@@ -1,0 +1,4 @@
+*.txt
+*.csv
+
+output/experiment_results_1.json
