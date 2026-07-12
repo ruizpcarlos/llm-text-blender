@@ -1,3 +1,8 @@
 ### LLM Text Blender
 
-Developed in the A&S Blue Engineering  during SS26
+Developed as part of A&S Blue Engineering course during SS26.
+
+#### To do's:
+- prettier README
+- modularize iterative_prompting.py
+- make it downloadable an usable w own texts?
