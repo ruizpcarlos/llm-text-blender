@@ -46,8 +46,10 @@ def multistep_rewriting(text,
     system_prompt = """You are a text rewriting assistant. Follow these rules strictly:
     1. Do NOT include a title or headers
     2. Keep output under 250 words
-    3. Preserve the original meaning
-    4. Do NOT include line breaks or multiple paragraphs - keep it as one block of text"""
+    3. Preserve the original meaning 
+    4. Preserve the perspective (first or third person)
+    5. USE THE ORIGINAL LANGUAGE
+    6. Do NOT include line breaks or multiple paragraphs - keep it as one block of text"""
     
     current_text = text
     
