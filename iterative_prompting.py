@@ -3,10 +3,13 @@ import json
 import csv
 import random
 from tqdm import tqdm
+from dotenv import load_dotenv
 from datetime import datetime
 from anthropic import Anthropic
 
 try:
+    # Load from .env file
+    load_dotenv()
     CLIENT = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 except:
     print("UNABLE TO FIND KEY")
