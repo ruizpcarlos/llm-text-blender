@@ -1,11 +1,19 @@
 import json
+import sys
 
-if __name__=="__main__":
-    with open("output/experiment_results_1.json", 'r', encoding='utf-8') as f:
-            results = json.load(f)
+text_id = int(sys.argv[1])
 
-    # print(json.dumps(results['texts'][1], indent=4))
+with open("output/experiment_results.json", 'r', encoding='utf-8') as f:
+    results = json.load(f)
 
-    for t in results['texts'][0]['iterations']:
-          print(t)
-          print(f"{len(t.split())} words")
+text = results['texts'][text_id]
+
+# print(json.dumps(results['texts'][1], indent=4))
+
+print(text['original'])
+print('----------')
+
+for k, txt in enumerate(text['iterations']):
+    print(f"----- k={k} ------")
+    print(txt)
+    print(f"{len(txt.split())} words")
