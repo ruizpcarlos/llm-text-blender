@@ -13,7 +13,7 @@ text = results['texts'][text_id]
 print(text['original'])
 print('----------')
 
-for k, txt in enumerate(text['iterations']):
+for k, txt in enumerate(text['iterations'],start=1):
     print(f"----- k={3*k} ------")
     print(txt)
     print(f"{len(txt.split())} words")
