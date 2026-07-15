@@ -181,9 +181,9 @@ if __name__ == '__main__':
 
     blender = LLMTextBlender(model="claude-haiku-4-5")
 
-    entries = blender.read_texts('data/text_collection.csv')
+    entries = blender.read_texts('data/artist_statements.csv')
     texts = blender.extract_texts(entries)
 
-    output_file = "output/experiment_results.json"
+    output_file = "output/artist_statements.json"
 
     rewrites = blender.run_experiment(texts, instructions, output_file)
